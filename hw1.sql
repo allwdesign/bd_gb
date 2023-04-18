@@ -2,8 +2,8 @@ USE lesson1;
 
 CREATE TABLE IF NOT EXISTS smartphone
 (
-	Id INT PRIMARY KEY AUTO_INCREMENT,
-    ProductName VARCHAR(45), 
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    ProductName VARCHAR(45),
     Manufacturer VARCHAR(45),
     ProductCount INT,
     Price INT
@@ -21,23 +21,22 @@ VALUES
 SELECT * FROM smartphone;
 
 /* 
-	2. Выведите название, производителя и цену для товаров,
-	количество которых превышает 2
+  2. Выведите название, производителя и цену для товаров,
+  количество которых превышает 2
 */
 SELECT ProductName, Manufacturer, Price
 FROM smartphone
 WHERE ProductCount>2;
 
-/* 
-	3. Выведите весь ассортимент товаров марки “Samsung”
-*/
+# 3. Выведите весь ассортимент товаров марки “Samsung”
+
 SELECT *
 FROM smartphone
 WHERE Manufacturer='Samsung';
 
 /* 
-	4. Выведите информацию о телефонах, где суммарный чек
-	больше 100 000 и меньше 145 000**
+  4. Выведите информацию о телефонах, где суммарный чек
+  больше 100 000 и меньше 145 000**
 */
 SELECT *
 FROM smartphone
