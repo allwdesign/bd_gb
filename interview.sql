@@ -83,7 +83,7 @@ ADD CONSTRAINT users_ibfk_1 FOREIGN KEY (user_id) REFERENCES users (id);
 SELECT * FROM clients;
 
 SELECT title, full_text, user_id, (
-    SELECT login FROM clients
+	SELECT login FROM clients
 	WHERE clients.id = posts.user_id
 ) AS login
 FROM posts;
@@ -93,5 +93,5 @@ SELECT *
 FROM posts
 WHERE posts.user_id IN (
 	SELECT id FROM clients
-    WHERE login = 'Mikle'
+	WHERE login = 'Mikle'
 );
